@@ -4,10 +4,6 @@ This is a backtop component that focuses on the PC side of web applications. It'
 - jquery.1.11.x
 # Installation
 
-## npm
-```html
-$ npm install
-```
 ## script
 ```html
 // import jquery.js
@@ -22,7 +18,7 @@ index.js
 $(function(){
   
   // instantiation backtop
-  var backtop=new Backtop();
+  var backtop=new Backtop(options);
   
   // start
   backtop.start();
@@ -42,4 +38,7 @@ $(function(){
 ## methods
 #### start()
 start the backtop component
+```html
+backtop.start();
+```
 
