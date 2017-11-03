@@ -17,7 +17,6 @@
 		factory.call(root, root.$);
 	}
 })(window, function($) {
-
 	/**
 	 * [Backtop description]
 	 */

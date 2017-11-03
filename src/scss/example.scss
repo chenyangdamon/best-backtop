@@ -1,43 +1,51 @@
 /* 
-example
-*/
+ Example 
+ */
+
 * {
     margin: 0;
     padding: 0;
     font-family: "微软雅黑";
     font-size: 14px;
+    font-style: normal;
     text-decoration: none;
 }
-/* components backtop */
+$example-theme-color: #ff6428;
 .example {
     &-top {
-        padding: 0 50px;
-        height: 50px;
-        line-height: 50px;
-        background: #2E2E36;
+        padding: 0 60px;
+        height: 60px;
+        line-height: 60px;
+        background: $example-theme-color;
         color: #FFF;
-        h4 {
-            font-size: 16px;
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            strong {
+                margin-left: 10px;
+                font-size: 16px;
+                font-weight: normal;
+            }
         }
     }
     &-container {
-        padding: 50px;
+        padding: 30px 60px;
     }
-    &-slide{
-        .btn{
+    &-slide {
+        .btn {
             position: fixed;
             right: 0;
             bottom: 100px;
-            width:100px;
-            height:40px;
-            line-height:40px;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
             text-align: center;
-            background-color: #2fa6e0;
-            color:#fff;
+            background-color: $example-theme-color;
+            color: #fff;
             display: none;
         }
-        .b2{
-            bottom:50px;
+        .b2 {
+            bottom: 50px;
         }
     }
 }
