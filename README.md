@@ -1,9 +1,10 @@
-# What is best-backtop ?
-This is a backtop component that focuses on the PC side of web applications. It's simple, compact, lightweight, efficient, and portable. Helps reduce the amount of development effort.
-# Dependence 
-- jquery.1.11.x
-# Installation
-
+# best-backtop 是什么?
+应用于web开发的回到顶部组件
+# 演示
+[Demo](https://chenyangdamon.github.io/best-backtop/dist/)
+# 依赖 
+- jquery
+# 安装
 ## script
 ```html
 // import jquery.js
@@ -11,33 +12,33 @@ This is a backtop component that focuses on the PC side of web applications. It'
 // import best-backtop.js
 <script type="text/javascript" src="js/best-backtop.js"></script>
 ```
-# Useage
+# 使用
 index.js
 ```html
 <script type="text/javascript">
 $(function(){
   
-  // instantiation backtop
+  // 实例化Backtop
   var backtop=new Backtop(options);
   
-  // start
+  // 开始运动
   backtop.start();
 
 });
 </script>
 ```
-# Constructor
-## Options
-|key|description|default|options|
+# 结构
+## 配置项
+|属性|说明|默认值|字段类型|
 |:---|---|---|---|
-| `container`|Container for carrying components.|`""`|`String`|
-| `threshold`|Trigger threshold.|`200`|`Number`|
-| `speed`|Speed of movement.|`500`|`Number`|
-| `mode`|Movement mode.|`run`|`String`|
+| `container`|触发事件的DOM.|`""`|`String`|
+| `threshold`|触发距离.|`200`|`Number`|
+| `speed`|滑动速度.|`500`|`Number`|
+| `mode`|运动模式.|`run`|`String`|
 
-## methods
+## 方法
 #### start()
-start the backtop component
+开始运动
 ```html
 backtop.start();
 ```

@@ -9,14 +9,13 @@
 (function(root, factory) {
 	if (typeof define === "function" && define.amd) {
 		// AMD模式
-		define(["jquery"], function() {
-			factory.apply(root, arguments)
-		});
+		define(["jquery"], factory);
 	} else {
 		// 全局模式
 		factory.call(root, root.$);
 	}
-})(window, function($) {
+}(typeof window !== "undefined" ? window : this, function($) {
+
 	/**
 	 * [Backtop description]
 	 */
@@ -72,7 +71,6 @@
 		bindEvent: function() {
 			var _this = this;
 			$(window).on("scroll", function() {
-				console.log(_this.$element)
 				var scrollTop = $(this).scrollTop();
 				if (scrollTop > _this.option.threshold) {
 					_this.$element.fadeIn();
@@ -90,6 +88,7 @@
 		 */
 		start: function(mode) {
 			var _this = this;
+			
 			_this[mode || _this.option.mode]();
 		},
 
@@ -121,5 +120,11 @@
 	 * [Backtop description]
 	 * @type {[type]}
 	 */
-	this.Backtop = Backtop;
-});
+	if (typeof define === "function" && define.amd) {
+		// AMD模式
+		return Backtop;
+	} else {
+		// 全局模式
+		this.Backtop = Backtop;
+	}
+}));
