@@ -42,7 +42,7 @@
 		 * [constructor description]
 		 * @type {String}
 		 */
-		constructor: "Backtop",
+		constructor: Backtop,
 		/**
 		 * 初始化
 		 * @param userOption
